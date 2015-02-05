@@ -14,6 +14,9 @@
 		96BB146F1A8338D300C4579F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96BB146E1A8338D300C4579F /* Images.xcassets */; };
 		96BB14721A8338D300C4579F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96BB14701A8338D300C4579F /* LaunchScreen.xib */; };
 		96BB147E1A8338D300C4579F /* poker2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB147D1A8338D300C4579F /* poker2Tests.m */; };
+		96BB148B1A833F7C00C4579F /* movie3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96BB14881A833F7C00C4579F /* movie3.jpg */; };
+		96BB148C1A833F7C00C4579F /* movie2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96BB14891A833F7C00C4579F /* movie2.jpg */; };
+		96BB148D1A833F7C00C4579F /* movie1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96BB148A1A833F7C00C4579F /* movie1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		96BB14771A8338D300C4579F /* poker2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poker2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BB147C1A8338D300C4579F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96BB147D1A8338D300C4579F /* poker2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = poker2Tests.m; sourceTree = "<group>"; };
+		96BB14881A833F7C00C4579F /* movie3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = movie3.jpg; path = images/movie3.jpg; sourceTree = SOURCE_ROOT; };
+		96BB14891A833F7C00C4579F /* movie2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = movie2.jpg; path = images/movie2.jpg; sourceTree = SOURCE_ROOT; };
+		96BB148A1A833F7C00C4579F /* movie1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = movie1.jpg; path = images/movie1.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				96BB14681A8338D300C4579F /* ViewController.h */,
 				96BB14691A8338D300C4579F /* ViewController.m */,
 				96BB146B1A8338D300C4579F /* Main.storyboard */,
+				96BB14871A833F5200C4579F /* resources */,
 				96BB146E1A8338D300C4579F /* Images.xcassets */,
 				96BB14701A8338D300C4579F /* LaunchScreen.xib */,
 				96BB14611A8338D300C4579F /* Supporting Files */,
@@ -117,6 +124,16 @@
 				96BB147C1A8338D300C4579F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96BB14871A833F5200C4579F /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				96BB14881A833F7C00C4579F /* movie3.jpg */,
+				96BB14891A833F7C00C4579F /* movie2.jpg */,
+				96BB148A1A833F7C00C4579F /* movie1.jpg */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +216,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BB148B1A833F7C00C4579F /* movie3.jpg in Resources */,
+				96BB148C1A833F7C00C4579F /* movie2.jpg in Resources */,
 				96BB146D1A8338D300C4579F /* Main.storyboard in Resources */,
 				96BB14721A8338D300C4579F /* LaunchScreen.xib in Resources */,
+				96BB148D1A833F7C00C4579F /* movie1.jpg in Resources */,
 				96BB146F1A8338D300C4579F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = poker2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = poker2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +434,7 @@
 				96BB14831A8338D300C4579F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96BB14841A8338D300C4579F /* Build configuration list for PBXNativeTarget "poker2Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +443,7 @@
 				96BB14861A8338D300C4579F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
