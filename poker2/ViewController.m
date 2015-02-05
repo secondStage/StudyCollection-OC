@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController () 
 @property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
@@ -16,6 +17,7 @@
 @implementation ViewController{
     
     NSMutableArray *moviePhotos;
+    UIImage *sendImage;
     
 }
 
@@ -26,6 +28,7 @@
     [self.myCollectionView setDelegate:self];
     
     [self setData];
+    
     
     
     
@@ -80,8 +83,33 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //クリックされたらよばれる
-    NSLog(@"Clicked %d-%d",indexPath.section,indexPath.row);
+    NSArray *paths = [collectionView indexPathsForSelectedItems];
+    NSIndexPath *path = [paths objectAtIndex: 0];
+    NSLog(@"Selected. Item number = %d", path.item);
+    
+    sendImage = moviePhotos[indexPath.row];
+    [self performSegueWithIdentifier:@"toDetailView" sender:nil];
+    
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"toDetailView"]) {
+        DetailViewController *secondViewController = segue.destinationViewController;
+        secondViewController.image = sendImage;
+        
+        secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        
+        NSLog(@"%@",sendImage);
+    }
+    
+}
+
+- (IBAction)unwindToTop:(UIStoryboardSegue *)segue
+{
+    
+}
+
 
 
 @end

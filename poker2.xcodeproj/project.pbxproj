@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C195CB1A83A516007EDAC1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C195CA1A83A516007EDAC1 /* DetailViewController.m */; };
 		96BB14641A8338D300C4579F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB14631A8338D300C4579F /* main.m */; };
 		96BB14671A8338D300C4579F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB14661A8338D300C4579F /* AppDelegate.m */; };
 		96BB146A1A8338D300C4579F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB14691A8338D300C4579F /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C195C91A83A516007EDAC1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		08C195CA1A83A516007EDAC1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		96BB145E1A8338D300C4579F /* poker2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poker2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BB14621A8338D300C4579F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96BB14631A8338D300C4579F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				96BB14681A8338D300C4579F /* ViewController.h */,
 				96BB14691A8338D300C4579F /* ViewController.m */,
 				96BB146B1A8338D300C4579F /* Main.storyboard */,
+				08C195C91A83A516007EDAC1 /* DetailViewController.h */,
+				08C195CA1A83A516007EDAC1 /* DetailViewController.m */,
 				96BB14871A833F5200C4579F /* resources */,
 				96BB146E1A8338D300C4579F /* Images.xcassets */,
 				96BB14701A8338D300C4579F /* LaunchScreen.xib */,
@@ -242,6 +247,7 @@
 				96BB146A1A8338D300C4579F /* ViewController.m in Sources */,
 				96BB14671A8338D300C4579F /* AppDelegate.m in Sources */,
 				96BB14641A8338D300C4579F /* main.m in Sources */,
+				08C195CB1A83A516007EDAC1 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
