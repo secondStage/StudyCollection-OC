@@ -8,9 +8,13 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "TestModel.h"
+
+#import <ASIHTTPRequest.h>
 
 @interface ViewController () 
 @property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
+
 
 @end
 
@@ -22,6 +26,7 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.myCollectionView setDataSource:self];
@@ -29,10 +34,10 @@
     
     [self setData];
     
-    
-    
-    
-}- (void)didReceiveMemoryWarning
+}
+
+
+- (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -42,12 +47,40 @@
     
     moviePhotos = [[NSMutableArray alloc]init];
     
-    for (int i = 1; i <= 3; i++) {
-        NSString *filename = [NSString stringWithFormat:@"movie%d.jpg", i];
-        [moviePhotos addObject:[UIImage imageNamed:filename]];
+    for (int i = 1; i <= [TestModel sharedManager].imageArray.count; i++) {
+        
+        
+        NSURL *myURL = [NSURL URLWithString:
+                        @"http://www.study.com/image/23.jpg"];
+        NSData *myData = [NSData dataWithContentsOfURL:myURL];
+        UIImage *myImage = [UIImage imageWithData:myData];
+                
+//        NSString *filename = [NSString stringWithFormat:@"movie%d.jpg", i];
+//        [moviePhotos addObject:[UIImage imageNamed:filename]];
+        [moviePhotos addObject:myImage];
 
     }
 }
+
+-(void)callApi{
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.YOURWEBSERVER.com/api/adAPI.php?AdID=1"];
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    
+    [request setDelegate:self];
+    [request startAsynchronous];
+}
+
+- (void)requestCompleted:(ASIHTTPRequest *)request
+{
+    NSString *responseString = [request responseString];
+    NSLog(@"API Response: %@", responseString);
+    
+    [self setData];
+}
+
+
 
 #pragma mark -collection view delegate
 

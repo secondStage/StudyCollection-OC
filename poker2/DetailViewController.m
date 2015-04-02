@@ -21,9 +21,6 @@
     
     [self.ImageView setImage:_image];
     
-    NSLog(@"%@",_image);
-    
-    
     // Do any additional setup after loading the view.
 }
 
