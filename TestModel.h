@@ -10,4 +10,8 @@
 
 @interface TestModel : NSObject
 
+@property NSArray *imageArray;
+
++ (TestModel *)sharedManager;
+
 @end
